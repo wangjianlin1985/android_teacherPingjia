@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Teacher" table="Teacher">
+
+          <!-- 主键教师用户名 -->
+          <id name="teacherNumber" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 简单字符串属性: 教师密码 -->
+          <property
+            name="password"
+            column="password"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 教师姓名 -->
+          <property
+            name="name"
+            column="name"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 教师性别 -->
+          <property
+            name="sex"
+            column="sex"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单整型属性: 教师年龄 -->
+          <property
+            name="age"
+            column="age"
+            type="int"
+
+          />
+
+          <!-- 简单字符串属性: 教授课程 -->
+          <property
+            name="courseName"
+            column="courseName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 联系电话 -->
+          <property
+            name="telephone"
+            column="telephone"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 邮箱地址 -->
+          <property
+            name="email"
+            column="email"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 附加信息 -->
+          <property
+            name="memo"
+            column="memo"
+            type="string"
+            length="200"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	
+	
+	<!-- 指定spring的配置文件，默认从web根目录寻找配置文件，我们可以通过spring提供的classpath:前缀指定从类路径下寻找 -->
+	<context-param>
+	   <param-name>contextConfigLocation</param-name>
+	   <param-value>classpath:beans.xml</param-value>
+	</context-param>
+	
+	
+	<!-- 对Spring容器进行实例化 -->
+	<listener>
+	      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	
+	<!-- struts启用配置 -->
+	<filter>
+	      <filter-name>struts2</filter-name> 
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>*.action</url-pattern>
+    </filter-mapping>
+    
+    
+    <!-- 登录验证servlet配置 -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+      
+    <!-- 用户注册servlet配置 -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- 上传图片servlet配置 -->
+    <servlet>
+        <servlet-name>UpPhotoServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.UpPhotoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpPhotoServlet</servlet-name>
+        <url-pattern>/UpPhotoServlet</url-pattern>
+    </servlet-mapping> 
+    
+    <!-- 学生信息管理servlet配置 -->
+    <servlet>
+        <servlet-name>StudentServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.StudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentServlet</servlet-name>
+        <url-pattern>/StudentServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 教师信息管理servlet配置 -->
+    <servlet>
+        <servlet-name>TeacherServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.TeacherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TeacherServlet</servlet-name>
+        <url-pattern>/TeacherServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 评价指标管理servlet配置 -->
+    <servlet>
+        <servlet-name>ItemInfoServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.ItemInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ItemInfoServlet</servlet-name>
+        <url-pattern>/ItemInfoServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 考核结果管理servlet配置 -->
+    <servlet>
+        <servlet-name>CheckResultServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.CheckResultServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckResultServlet</servlet-name>
+        <url-pattern>/CheckResultServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 结果指标管理servlet配置 -->
+    <servlet>
+        <servlet-name>ResultItemServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.ResultItemServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResultItemServlet</servlet-name>
+        <url-pattern>/ResultItemServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 问卷结果管理servlet配置 -->
+    <servlet>
+        <servlet-name>QuestionResultServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.QuestionResultServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QuestionResultServlet</servlet-name>
+        <url-pattern>/QuestionResultServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 评价时间设置管理servlet配置 -->
+    <servlet>
+        <servlet-name>TimeSetServlet</servlet-name>
+        <servlet-class>com.mobileserver.servlet.TimeSetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TimeSetServlet</servlet-name>
+        <url-pattern>/TimeSetServlet</url-pattern>
+    </servlet-mapping>
+
+ 
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

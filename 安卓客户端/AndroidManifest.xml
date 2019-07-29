@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="StudentListActivity"></activity>
+        <activity android:name="StudentQueryActivity"></activity>
+        <activity android:name="StudentAddActivity"></activity>
+        <activity android:name="StudentEditActivity"></activity>
+        <activity android:name="StudentDetailActivity"></activity>
+        <activity android:name="TeacherListActivity"></activity>
+        <activity android:name="TeacherQueryActivity"></activity>
+        <activity android:name="TeacherAddActivity"></activity>
+        <activity android:name="TeacherEditActivity"></activity>
+        <activity android:name="TeacherDetailActivity"></activity>
+        <activity android:name="ItemInfoListActivity"></activity>
+        <activity android:name="ItemInfoQueryActivity"></activity>
+        <activity android:name="ItemInfoAddActivity"></activity>
+        <activity android:name="ItemInfoEditActivity"></activity>
+        <activity android:name="ItemInfoDetailActivity"></activity>
+        <activity android:name="CheckResultListActivity"></activity>
+        <activity android:name="CheckResultQueryActivity"></activity>
+        <activity android:name="CheckResultAddActivity"></activity>
+        <activity android:name="CheckResultEditActivity"></activity>
+        <activity android:name="CheckResultDetailActivity"></activity>
+        <activity android:name="ResultItemListActivity"></activity>
+        <activity android:name="ResultItemQueryActivity"></activity>
+        <activity android:name="ResultItemAddActivity"></activity>
+        <activity android:name="ResultItemEditActivity"></activity>
+        <activity android:name="ResultItemDetailActivity"></activity>
+        <activity android:name="QuestionResultListActivity"></activity>
+        <activity android:name="QuestionResultQueryActivity"></activity>
+        <activity android:name="QuestionResultAddActivity"></activity>
+        <activity android:name="QuestionResultEditActivity"></activity>
+        <activity android:name="QuestionResultDetailActivity"></activity>
+        <activity android:name="TimeSetListActivity"></activity>
+        <activity android:name="TimeSetQueryActivity"></activity>
+        <activity android:name="TimeSetAddActivity"></activity>
+        <activity android:name="TimeSetEditActivity"></activity>
+        <activity android:name="TimeSetDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>
