@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="CheckResult" table="CheckResult">
+
+          <!-- 主键记录编号 -->
+          <id name="resultId" column="resultId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 评价的学生 -->
+          <many-to-one name="studentObj"
+            column="studentObj"
+            class="Student"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 被评价老师 -->
+          <many-to-one name="teacherObj"
+            column="teacherObj"
+            class="Teacher"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 被评价的指标 -->
+          <many-to-one name="itemObj"
+            column="itemObj"
+            class="ItemInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 评价结果 -->
+          <many-to-one name="resultObj"
+            column="resultObj"
+            class="ResultItem"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

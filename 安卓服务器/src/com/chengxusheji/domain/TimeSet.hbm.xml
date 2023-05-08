@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="TimeSet" table="TimeSet">
+
+          <!-- 主键记录编号 -->
+          <id name="timeId" column="timeId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单日期型属性: 开始日期 -->
+          <property
+            name="startDate"
+            column="startDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单日期型属性: 结束日期 -->
+          <property
+            name="endDate"
+            column="endDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
